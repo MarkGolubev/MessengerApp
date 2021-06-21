@@ -28,10 +28,11 @@ extension DatatbaseManager {
         
         database.child(safeEmail).observeSingleEvent(of: .value, with: { snapshot in
             guard snapshot.value as? String != nil else {
-                completion(true)
+                print(snapshot.value as Any)
+                completion(false)
                 return
             }
-            completion(false)
+            completion(true)
         })
     }
     

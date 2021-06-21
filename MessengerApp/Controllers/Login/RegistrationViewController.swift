@@ -184,7 +184,7 @@ class RegistrationViewController: UIViewController {
             alertUserLoginError()
             return
         }
-        // Firebase Log In
+        // Firebase Registration
         DatatbaseManager.shared.userExists(with: email, completion: { [weak self] exists in
             guard let strongSelf = self else {
                 return
